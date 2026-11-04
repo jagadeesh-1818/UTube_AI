@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from urllib.parse import urlparse, parse_qs
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 load_dotenv()
 
@@ -80,17 +81,30 @@ retriever = vector_store.as_retriever(search_type= 'similarity', search_kwargs= 
 
 #Prompt
 
-prompt = PromptTemplate(template="You are a helpful assistant." \
-"answer only from the provided transcript context." \
-"if the context is insufficient, just say you don't know." \
-"{context}" \
-"Question: {question}",
-input_variables=['context', 'question']
+prompt = PromptTemplate(
+    template="""
+You are a helpful YouTube video assistant.
+
+Answer the user's question using ONLY the
+provided transcript context.
+
+If the context does not contain the answer,
+say "I don't know based on this video."
+
+Chat History:
+{chat_history}
+Context:
+{context}
+
+Question:
+{question}
+
+Answer:
+""",
+    input_variables=["context", "question", "chat_history"]
 )
 
 parser = StrOutputParser()
-
-question = input('Enter your query:')
 
 def format_docs(retrieved_docs):
     context_text = "\n\n".join(doc.page_content for doc in retrieved_docs)
@@ -98,12 +112,27 @@ def format_docs(retrieved_docs):
 
 #Chain
 parallel_chain = RunnableParallel({
-    'context' : retriever | RunnableLambda(format_docs),
-    'question': RunnablePassthrough()
+    'chat_history': RunnableLambda(lambda x: x['chat_history']),
+    'context' : RunnableLambda(lambda x: x['question']) | retriever | RunnableLambda(format_docs),
+    'question': RunnableLambda(lambda x: x['question'])
 })
 
 chain = parallel_chain | prompt | llm | parser
 
-#LLM Response Generation
-response = chain.invoke(question)
-print(f'\nAI: {response}')
+chat_history = []
+
+while True:
+
+    question = input('\nEnter your query:')
+
+    if question.lower().strip() in ['quit', 'exit']:
+        break
+
+    chat_history.append(HumanMessage(content=question))
+
+    response = chain.invoke({"chat_history": chat_history, "question": question})
+
+    print(f'\nAI: {response}')
+
+    chat_history.append(AIMessage(content=response))
+    chat_history.append(HumanMessage(content=question))
