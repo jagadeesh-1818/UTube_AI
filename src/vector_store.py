@@ -1,7 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
 from langchain_community.vectorstores import FAISS
-
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
@@ -57,15 +55,11 @@ def create_vector_store(documents):
 
 
 def create_retriever(vector_store):
-
-    retriever = vector_store.as_retriever(
-
-        search_type="similarity",
-
+    return vector_store.as_retriever(
+        search_type="mmr",
         search_kwargs={
-            "k": 4
+            "k": 6,
+            "fetch_k": 20,
+            "lambda_mult": 0.7
         }
-
     )
-
-    return retriever

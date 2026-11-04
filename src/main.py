@@ -6,14 +6,11 @@ load_dotenv()
 import os
 
 from langchain_core.messages import HumanMessage, AIMessage
-
 from src.transcript import extract_video_id, extract_transcript
-
 from src.vector_store import (
     create_vector_store,
     create_retriever
 )
-
 from src.rag_chain import get_rag_response
 
 
