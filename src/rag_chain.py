@@ -161,10 +161,11 @@ Answer:
 """,
 
     input_variables=[
-        "chat_history",
-        "context",
-        "question"
-    ]
+    "chat_history",
+    "context",
+    "question",
+    "response_language"
+]
 
 )
 
@@ -177,7 +178,7 @@ answer_chain = answer_prompt | llm | parser
 # ---------------------------------
 
 
-def get_rag_response(question, chat_history, retriever):
+def get_rag_response(question, chat_history, retriever, return_details=False):
 
     history_text = format_history(chat_history)
 
@@ -223,6 +224,21 @@ def get_rag_response(question, chat_history, retriever):
         "response_language": response_language
 
     })
+
+    if return_details:
+
+        return {
+            "answer": response,
+            "context": context,
+            "retrieved_chunks": [
+                {
+                    "chunk_id": doc.metadata.get("chunk_id"),
+                    "timestamp": doc.metadata.get("start"),
+                    "content": doc.page_content
+                }
+                for doc in retrieved_docs
+            ]
+        }
 
     return response
 

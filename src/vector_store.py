@@ -19,39 +19,33 @@ embeddings = HuggingFaceEmbeddings(
 )
 
 
+
 def create_vector_store(documents):
 
-    # Text splitting
-
     splitter = RecursiveCharacterTextSplitter(
-
         chunk_size=1000,
-
         chunk_overlap=200
-
     )
 
     chunks = splitter.split_documents(documents)
 
-    if not chunks:
+    # Assign unique IDs
+    for i, chunk in enumerate(chunks):
+        chunk.metadata["chunk_id"] = f"chunk_{i:03d}"
 
+    if not chunks:
         raise ValueError("No chunks generated from transcript.")
 
-    print(f"\nTotal chunks created: {len(chunks)}")
-
-    # Generate embeddings and create FAISS database
 
     vector_store = FAISS.from_documents(
-
         documents=chunks,
-
         embedding=embeddings
-
     )
 
     print("FAISS vector database created successfully.")
 
     return vector_store
+
 
 
 def create_retriever(vector_store):
