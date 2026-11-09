@@ -1,23 +1,20 @@
 
-langchain
+streamlit
+python-dotenv
+
+# LangChain
 langchain-core
 langchain-community
-langchain-classic
-langchain-google-genai
-langchain-openai
-langchain-anthropic
-langchain-huggingface
-langchain-groq
-youtube-transcript-api
 langchain-text-splitters
-langchain-chroma
-chromadb
+langchain-groq
+langchain-huggingface
+
+# YouTube transcripts
+youtube-transcript-api
+
+# Embeddings and vector search
 sentence-transformers
-pypdf
-python-dotenv
-numpy
-pandas
-scikit-learn
-jupyter
-ipykernel
-streamlit
+faiss-cpu
+
+# Language detection
+langdetect

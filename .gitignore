@@ -13,3 +13,14 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Local dependency backup
+requirements_backup.txt
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Model and application caches
+.cache/
+*.faiss
+*.pkl

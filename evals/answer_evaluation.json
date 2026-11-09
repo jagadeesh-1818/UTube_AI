@@ -1,13 +1,13 @@
 {
     "summary": {
         "total_questions": 18,
-        "successfully_evaluated": 16,
-        "failed_evaluations": 2,
+        "successfully_evaluated": 18,
+        "failed_evaluations": 0,
         "answerable_questions": 15,
         "average_correctness": 5.0,
         "average_faithfulness": 4.6,
         "average_relevance": 5.0,
-        "unanswerable_questions": 1,
+        "unanswerable_questions": 3,
         "average_abstention_score": 5.0
     },
     "results": [
@@ -615,13 +615,49 @@
             "id": "Q17",
             "question": "What is the creator's exact weekly workout schedule?",
             "answerable": false,
-            "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m6gr8cc6eqn8f5e13z0tmg0x` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 200000, Requested 2590. Please try again in 18m38.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+            "generated_answer": "The transcript does not provide the creator’s exact weekly workout schedule. No specific days, number of sessions, or exercise breakdown per week are mentioned in the provided text.",
+            "scores": {
+                "correctness": 5,
+                "faithfulness": 5,
+                "relevance": 5,
+                "abstention_score": 5,
+                "claim_checks": [
+                    {
+                        "claim": "The transcript does not provide the creator’s exact weekly workout schedule.",
+                        "verdict": "supported",
+                        "evidence_quote": "The provided chunks discuss diet systems, V‑taper concepts, exercise technique, and mindset, but none contain any mention of a specific weekly workout schedule.",
+                        "explanation": "None of the retrieved transcript chunks include a detailed weekly schedule, so the claim that the transcript does not provide it is supported."
+                    },
+                    {
+                        "claim": "No specific days, number of sessions, or exercise breakdown per week are mentioned in the provided text.",
+                        "verdict": "supported",
+                        "evidence_quote": "Chunk 002 talks about the misconception of training six days a week, but does not list any concrete days or session counts; all other chunks similarly lack any weekly breakdown.",
+                        "explanation": "The evidence shows that while training frequency is discussed in general terms, there is no explicit schedule, supporting the claim that no specific days, sessions, or breakdown are mentioned."
+                    }
+                ],
+                "reason": "The answer correctly states that the transcript lacks the requested schedule (correctness 5). All factual statements are backed by the absence of schedule information in the retrieved chunks, with no contradictions (faithfulness 5). The response directly addresses the question, making it fully relevant (relevance 5)."
+            }
         },
         {
             "id": "Q18",
             "question": "What is the creator's body fat percentage?",
             "answerable": false,
-            "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m6gr8cc6eqn8f5e13z0tmg0x` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198419, Requested 3075. Please try again in 10m45.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+            "generated_answer": "The transcript does not provide any information about the creator’s body fat percentage.",
+            "scores": {
+                "correctness": 5,
+                "faithfulness": 5,
+                "relevance": 5,
+                "abstention_score": 5,
+                "claim_checks": [
+                    {
+                        "claim": "The transcript does not provide any information about the creator’s body fat percentage.",
+                        "verdict": "supported",
+                        "evidence_quote": "",
+                        "explanation": "None of the retrieved transcript chunks mention the creator's body fat percentage; they discuss calories, V‑taper shape, exercises, and nutrition, so the claim that the transcript lacks this information is consistent with the evidence."
+                    }
+                ],
+                "reason": "The answer correctly states that the transcript contains no data on body fat percentage, which matches the retrieved content. All factual statements are supported, and the response directly addresses the question."
+            }
         }
     ]
 }
