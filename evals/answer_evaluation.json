@@ -5,7 +5,7 @@
         "failed_evaluations": 0,
         "answerable_questions": 15,
         "average_correctness": 5.0,
-        "average_faithfulness": 4.6,
+        "average_faithfulness": 4.47,
         "average_relevance": 5.0,
         "unanswerable_questions": 3,
         "average_abstention_score": 5.0
@@ -15,7 +15,7 @@
             "id": "Q01",
             "question": "What is a V-taper?",
             "answerable": true,
-            "generated_answer": "A V‑taper is the classic “broad‑shoulders‑to‑narrow‑waist” silhouette that humans find most attractive. It’s the shape seen on superheroes, ancient Greek statues, and the ideal physique the video’s creator wants you to develop—broad, wide shoulders that flare out and then taper down to a slimmer waist, creating a triangular or “Greek‑god” outline【Timestamp: 00:00】.",
+            "generated_answer": "A V‑taper is the classic “broad‑shoulders‑to‑narrow‑waist” silhouette that humans find most attractive. It’s the shape seen in superheroes and ancient Greek statues—wide, aesthetic shoulders that flare out and then taper down to a slimmer waist, creating a triangular or “V” outline. 【Timestamp: 00:00】【Timestamp: 03:03】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -25,81 +25,87 @@
                     {
                         "claim": "A V‑taper is the classic “broad‑shoulders‑to‑narrow‑waist” silhouette that humans find most attractive.",
                         "verdict": "supported",
-                        "evidence_quote": "Broad shoulders tapering down to a smaller waist. The V-taper. ... Why do we, as humans, instantly find some physiques more attractive than others? ... It's not about muscle, it's about the shape. There is only one body shape humans are wired to find attractive.",
-                        "explanation": "The transcript explicitly defines the V‑taper as broad shoulders tapering to a smaller waist and states that humans are wired to find this shape attractive."
+                        "evidence_quote": "Broad shoulders tapering down to a smaller waist. The V-taper.",
+                        "explanation": "Chunk 000 explicitly describes the V‑taper as broad shoulders tapering down to a smaller waist and notes it as the shape humans find attractive."
                     },
                     {
-                        "claim": "It’s the shape seen on superheroes, ancient Greek statues, and the ideal physique the video’s creator wants you to develop—broad, wide shoulders that flare out and then taper down to a slimmer waist, creating a triangular or “Greek‑god” outline.",
+                        "claim": "It’s the shape seen in superheroes and ancient Greek statues—wide, aesthetic shoulders that flare out and then taper down to a slimmer waist, creating a triangular or “V” outline.",
                         "verdict": "supported",
-                        "evidence_quote": "Look at every superhero you have ever seen. Superman, Batman, Captain America. Same exact shape. Go back 2,000 years to the statues of ancient Greece. Same shape. Broad shoulders tapering down to a smaller waist. The V-taper.",
-                        "explanation": "The transcript mentions superheroes and ancient Greek statues having the same shape and describes it as broad shoulders tapering to a smaller waist, matching the answer’s description."
+                        "evidence_quote": "Look at every superhero you have ever seen. Superman, Batman, Captain America. Same exact shape. Go back 2,000 years to the statues of ancient Greece. Same shape.",
+                        "explanation": "Chunk 000 mentions that both superheroes and ancient Greek statues share the same shape—broad shoulders tapering to a smaller waist—matching the description in the claim."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript excerpts, with no contradictions. The answer correctly defines a V‑taper, matching the expected answer, and stays fully relevant to the question."
+                "reason": "Both statements in the generated answer are directly supported by the transcript (chunk 000). No contradictory or unsupported information is present, and the answer directly addresses the question about what a V‑taper is."
             }
         },
         {
             "id": "Q02",
             "question": "Which three exercises does the creator recommend?",
             "answerable": true,
-            "generated_answer": "The creator says that you only need to master three core movements to build a V‑taper:\n\n1. **Chest‑supported lateral raises** – performed on a bench with dumbbells to target the side delts without the traps taking over.  \n   *Mentioned around 01:01.*\n\n2. **Incline pressing** – ideally on a Smith machine (or, if you don’t have one, dumbbell incline presses or feet‑elevated push‑ups) to develop the upper chest.  \n   *Mentioned around 03:03.*\n\n3. **Pull‑ups** – done from a dead hang, driving the chest to the bar, progressing to weighted pull‑ups once you can do 15‑20 reps.  \n   *Mentioned around 03:03 and reinforced at 04:04.*\n\nThese three exercises are presented as the complete “core” routine for achieving the desired V‑taper.",
+            "generated_answer": "The creator says the V‑taper can be built by focusing on three core movements:\n\n1. **Chest‑supported dumbbell lateral raises** – performed on an inclined bench with the chest flat against it, raising the dumbbells by leading with the elbows.  \n   *Timestamp: 01:01 – 01:01 (repeated at 01:01)*  \n\n2. **Incline Smith‑machine presses** (or the equivalent incline dumbbell press/feet‑elevated push‑up if a Smith machine isn’t available) – set the bench at about 30°–45° and press with a grip slightly wider than shoulder‑width.  \n   *Timestamp: 02:02*  \n\n3. **Pull‑ups** – start each rep from a dead hang, drive the chest to the bar, and progress to weighted pull‑ups once you can do 15‑20 reps.  \n   *Timestamp: 04:04 – 03:03 (pull‑up technique described)*  \n\nThese three exercises are presented as the “three‑exercise core” that the creator says will effectively develop a V‑taper.",
             "scores": {
                 "correctness": 5,
-                "faithfulness": 5,
+                "faithfulness": 4,
                 "relevance": 5,
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The creator says that you only need to master three core movements to build a V‑taper:",
+                        "claim": "The creator says the V‑taper can be built by focusing on three core movements:",
                         "verdict": "supported",
-                        "evidence_quote": "Most guys think building a V-taper means training six days a week... It is honestly as simple as mastering three core exercises. Each one fixes a specific problem that is killing your proportions. Let me walk you through them.",
-                        "explanation": "Chunk 002 states that mastering three core exercises is the simple approach to a V‑taper."
+                        "evidence_quote": "It is honestly as simple as mastering three core exercises. Each one fixes a specific problem that is killing your proportions. Let me walk you through them.",
+                        "explanation": "The transcript states the plan is based on three core exercises."
                     },
                     {
-                        "claim": "Chest‑supported lateral raises – performed on a bench with dumbbells to target the side delts without the traps taking over.",
+                        "claim": "Chest‑supported dumbbell lateral raises – performed on an inclined bench with the chest flat against it, raising the dumbbells by leading with the elbows.",
                         "verdict": "supported",
-                        "evidence_quote": "Exercise number one, chest-supported lateral raises. This is my favorite exercise for building wide, aesthetic shoulders... Instead, I want you to try chest-supported dumbbell lateral raises. Here is how you do them properly. Set a bench to a slight ...",
-                        "explanation": "Chunk 002 describes chest‑supported lateral raises as the first exercise."
+                        "evidence_quote": "Instead, I want you to try chest-supported dumbbell lateral raises. ... Set a bench to a slight incline. Lay your chest flat against it. Grab two dumbbells and bend your elbows slightly. From there, raise the weights out to your sides, leading with your elbows, not your hands.",
+                        "explanation": "Chunk 003 describes the exact setup and movement."
                     },
                     {
-                        "claim": "Mentioned around 01:01.",
-                        "verdict": "supported",
-                        "evidence_quote": "timestamp\": 61.04",
-                        "explanation": "61.04 seconds equals approximately 1:01, matching the claimed timestamp."
+                        "claim": "Timestamp: 01:01 – 01:01 (repeated at 01:01)",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "The retrieved transcript does not provide any timestamp information matching this claim."
                     },
                     {
-                        "claim": "Incline pressing – ideally on a Smith machine (or, if you don’t have one, dumbbell incline presses or feet‑elevated push‑ups) to develop the upper chest.",
+                        "claim": "Incline Smith‑machine presses … set the bench at about 30°–45° and press with a grip slightly wider than shoulder‑width.",
                         "verdict": "supported",
-                        "evidence_quote": "it up. The whole point of using a Smith machine is control... If you do not have a Smith machine, use dumbbell incline presses or feet elevated push-ups if you are training at home. This exercise builds that armored upper chest.",
-                        "explanation": "Chunk 006 lists the Smith‑machine incline press and alternatives as the second core exercise."
+                        "evidence_quote": "Exercise number two, incline Smith machine presses... Set the bench to 30° to 45°. Keep your grip slightly wider than shoulder width.",
+                        "explanation": "Chunk 004 contains the exact description of the bench angle and grip width."
                     },
                     {
-                        "claim": "Mentioned around 03:03.",
-                        "verdict": "supported",
-                        "evidence_quote": "timestamp\": 183.04",
-                        "explanation": "183.04 seconds is roughly 3 minutes and 3 seconds, matching the claimed timestamp."
+                        "claim": "Timestamp: 02:02",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "No timestamp evidence is present in the transcript."
                     },
                     {
-                        "claim": "Pull‑ups – done from a dead hang, driving the chest to the bar, progressing to weighted pull‑ups once you can do 15‑20 reps.",
+                        "claim": "Pull‑ups – start each rep from a dead hang, drive the chest to the bar, and progress to weighted pull‑ups once you can do 15‑20 reps.",
                         "verdict": "supported",
-                        "evidence_quote": "Exercise number three, pull-ups... Start each rep from a dead hang, arms fully extended. Drive your chest to the bar, not your chin... Treat pull-ups like any other exercise. When you can do 15 to 20 reps, add weight with a belt or a dumbbell between your legs...",
-                        "explanation": "Both Chunk 006 and Chunk 008 describe pull‑ups with the same technique and progression."
+                        "evidence_quote": "Treat pull-ups like any other exercise. When you can do 15 to 20 reps, add weight... Start each rep from a dead hang, arms fully extended. Drive your chest to the bar, not your chin.",
+                        "explanation": "Chunks 008 and 006 describe the starting position, chest‑to‑bar cue, and progression to weighted pull‑ups."
                     },
                     {
-                        "claim": "Mentioned around 03:03 and reinforced at 04:04.",
+                        "claim": "Timestamp: 04:04 – 03:03 (pull‑up technique described)",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "The transcript does not contain these timestamps."
+                    },
+                    {
+                        "claim": "These three exercises are presented as the “three‑exercise core” that the creator says will effectively develop a V‑taper.",
                         "verdict": "supported",
-                        "evidence_quote": "timestamp\": 183.04 (3:03) in chunk 006 and \"timestamp\": 244.28 (4:04) in chunk 008",
-                        "explanation": "The timestamps correspond to the times given in the answer."
+                        "evidence_quote": "That is the three exercise core. Simple, but brutally effective.",
+                        "explanation": "Chunk 008 explicitly calls them the three‑exercise core for the V‑taper."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, including the three exercises and their timestamps. Therefore the answer is fully correct, fully faithful, and directly relevant to the question."
+                "reason": "All factual statements about the three recommended exercises are directly supported by the retrieved transcript. The only unsupported items are the specific timestamps, which are not mentioned in the evidence. No contradictions are present, so the answer receives perfect scores for correctness, faithfulness, and relevance."
             }
         },
         {
             "id": "Q03",
             "question": "How do you perform chest-supported lateral raises?",
             "answerable": true,
-            "generated_answer": "Chest‑supported dumbbell lateral raises are done while lying face‑up on a slightly inclined bench. Here’s the proper technique as described in the video:\n\n1. **Set up the bench** – Adjust a bench to a slight incline and lie on it with your chest flat against the pad.【Timestamp: 01:01】\n\n2. **Grab the dumbbells** – Hold a dumbbell in each hand, elbows bent just a little. 【Timestamp: 01:01】\n\n3. **Raise the weights** – From this position, lift the dumbbells out to your sides, **leading with your elbows** (not your hands) so the tension stays on the deltoids rather than the traps. 【Timestamp: 02:02】\n\n4. **Range of motion** – Stop the movement just before your arms reach a 90‑degree angle, then lower the weights back down slowly. 【Timestamp: 01:01】\n\n5. **Control the tempo** – Perform the lift in a controlled manner, avoiding momentum; go up slowly and come down even slower. 【Timestamp: 02:02】\n\n6. **Reps and sets** – Aim for 2–3 sets of 12–15 repetitions. 【Timestamp: 02:02】\n\nKey mistakes to avoid:  \n- Leading with the hands (shifts work to the traps).  \n- Using momentum or cheating the range of motion.  \n\nFollowing these steps will target the side deltoids effectively and help build a wider, more aesthetic shoulder width.",
+            "generated_answer": "Chest‑supported lateral raises are done while lying face‑up on a slightly inclined bench so that your chest stays pressed against the bench.  \n\n1. **Set up the bench** – Adjust a bench to a slight incline and lie on it with your chest flat against the surface.  \n2. **Grab the dumbbells** – Hold a dumbbell in each hand, elbows bent just a little.  \n3. **Raise the weights** – Lift the dumbbells out to your sides, leading the movement with your elbows (not your hands).  \n4. **Range of motion** – Stop just before your arms reach a 90‑degree angle, then lower the weights slowly back down.  \n\nThe key cues are to keep the elbows leading the motion, avoid using momentum, and perform the lift slowly and under control. (See timestamps 01:01 and 01:01 for the detailed description.)",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 2,
@@ -107,58 +113,46 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "Chest‑supported dumbbell lateral raises are done while lying face‑up on a slightly inclined bench.",
+                        "claim": "Chest‑supported lateral raises are done while lying face‑up on a slightly inclined bench so that your chest stays pressed against the bench.",
                         "verdict": "supported",
                         "evidence_quote": "Set a bench to a slight incline. Lay your chest flat against it.",
-                        "explanation": "The transcript describes setting a bench to a slight incline and laying the chest flat against it, which implies lying face‑up on the bench."
+                        "explanation": "The transcript instructs to set a bench to a slight incline and lay the chest flat against it, which matches the description of lying face‑up with the chest pressed against the bench."
                     },
                     {
-                        "claim": "Adjust a bench to a slight incline and lie on it with your chest flat against the pad.",
+                        "claim": "Set up the bench – Adjust a bench to a slight incline and lie on it with your chest flat against the surface.",
                         "verdict": "supported",
                         "evidence_quote": "Set a bench to a slight incline. Lay your chest flat against it.",
-                        "explanation": "Directly matches the transcript instruction."
+                        "explanation": "The same sentence from the transcript confirms the bench angle and chest position."
                     },
                     {
-                        "claim": "Hold a dumbbell in each hand, elbows bent just a little.",
+                        "claim": "Grab a dumbbell in each hand, elbows bent just a little.",
                         "verdict": "supported",
                         "evidence_quote": "Grab two dumbbells and bend your elbows slightly.",
-                        "explanation": "Exact wording from the transcript."
+                        "explanation": "The transcript explicitly says to grab two dumbbells and bend the elbows slightly."
                     },
                     {
-                        "claim": "From this position, lift the dumbbells out to your sides, leading with your elbows (not your hands).",
+                        "claim": "Lift the dumbbells out to your sides, leading the movement with your elbows (not your hands).",
                         "verdict": "supported",
                         "evidence_quote": "From there, raise the weights out to your sides, leading with your elbows, not your hands.",
-                        "explanation": "Matches the transcript description."
+                        "explanation": "The transcript gives the exact cue to raise the weights out to the sides leading with the elbows."
                     },
                     {
-                        "claim": "Stop the movement just before your arms reach a 90‑degree angle, then lower the weights back down slowly.",
+                        "claim": "Stop just before your arms reach a 90‑degree angle, then lower the weights slowly back down.",
                         "verdict": "supported",
                         "evidence_quote": "Stop just before your arms hit 90°, then lower them back down",
-                        "explanation": "Transcript specifies stopping just before 90° and lowering back down."
+                        "explanation": "The transcript states to stop just before a 90° angle and then lower the weights."
                     },
                     {
-                        "claim": "Perform the lift in a controlled manner, avoiding momentum; go up slowly and come down even slower.",
+                        "claim": "The key cues are to keep the elbows leading the motion, avoid using momentum, and perform the lift slowly and under control.",
                         "verdict": "supported",
-                        "evidence_quote": "go up slow and come down even slower.",
-                        "explanation": "Transcript advises controlled tempo and avoiding momentum."
+                        "evidence_quote": "First, do not lead with your hands. ... Second, do not use momentum. The bench helps because you cannot really cheat, but still, go up slow and come down even slower.",
+                        "explanation": "Chunk 004 warns against leading with the hands, using momentum, and advises slow, controlled movement, matching the claim."
                     },
                     {
-                        "claim": "Aim for 2–3 sets of 12–15 repetitions.",
-                        "verdict": "supported",
-                        "evidence_quote": "two to three sets of 12 to 15 reps.",
-                        "explanation": "Directly stated in the transcript."
-                    },
-                    {
-                        "claim": "Leading with the hands shifts work to the traps.",
-                        "verdict": "supported",
-                        "evidence_quote": "do not lead with your hands. That shifts tension from your delts to your traps.",
-                        "explanation": "Transcript lists this as a mistake."
-                    },
-                    {
-                        "claim": "Using momentum is a mistake.",
-                        "verdict": "supported",
-                        "evidence_quote": "do not use momentum. ... go up slow and come down even slower.",
-                        "explanation": "Transcript warns against using momentum."
+                        "claim": "(See timestamps 01:01 and 01:01 for the detailed description.)",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "The retrieved transcript does not provide any timestamp information matching 01:01; therefore this claim is not supported by the evidence."
                     },
                     {
                         "claim": "The generated answer instructs the user to lie face-up.",
@@ -167,14 +161,14 @@
                         "explanation": "The generated answer says to lie face-up, but the retrieved transcript instructs the user to place their chest against the bench. This is a significant contradiction."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions or unsupported claims. The answer fully addresses the question, providing a complete, correct description of how to perform chest‑supported lateral raises. Python regression check: detected a face-up instruction conflicting with the chest-supported position. Faithfulness capped at 2."
+                "reason": "The answer correctly describes how to perform chest‑supported lateral raises and is directly relevant to the question, earning a perfect correctness and relevance score. All factual steps are backed by the transcript except for the mention of specific timestamps, which lacks evidence, lowering the faithfulness score to 4. Python regression check: detected a face-up instruction conflicting with the chest-supported position. Faithfulness capped at 2."
             }
         },
         {
             "id": "Q04",
             "question": "How many sets and reps are recommended for lateral raises?",
             "answerable": true,
-            "generated_answer": "The video recommends performing **2–3 sets of 12–15 repetitions** for the chest‑supported dumbbell lateral raises【02:02】.",
+            "generated_answer": "The video recommends performing chest‑supported dumbbell lateral raises for **three sets of 8–12 repetitions**, taking each set to failure. 【Timestamp: 03:03】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -182,20 +176,26 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The video recommends performing 2–3 sets of 12–15 repetitions for the chest‑supported dumbbell lateral raises.",
+                        "claim": "The video recommends performing chest‑supported dumbbell lateral raises",
                         "verdict": "supported",
-                        "evidence_quote": "I like ... to do two to three sets of 12 to 15 reps.",
-                        "explanation": "Chunk 004 explicitly states the recommendation of two to three sets of 12 to 15 reps for the exercise."
+                        "evidence_quote": "letting their traps do all the work. That hits the wrong muscle. Instead, I want you to try chest-supported dumbbell lateral raises. Here is how you do them properly.",
+                        "explanation": "Chunk 003 explicitly mentions chest‑supported dumbbell lateral raises as the exercise being discussed."
+                    },
+                    {
+                        "claim": "three sets of 8–12 repetitions, taking each set to failure",
+                        "verdict": "supported",
+                        "evidence_quote": "Three sets of eight to 12 reps, going to failure on every set.",
+                        "explanation": "Chunk 006 states exactly three sets of eight to twelve reps, performed to failure, matching the answer."
                     }
                 ],
-                "reason": "The generated answer exactly matches the expected recommendation and is fully supported by the transcript evidence, making it correct, faithful, and relevant."
+                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions. The answer directly addresses the question about sets and reps for lateral raises, making it fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q05",
             "question": "What incline angle is recommended for Smith machine presses?",
             "answerable": true,
-            "generated_answer": "The recommended incline angle for the Smith‑machine press is **30 ° to 45 °**.【Timestamp: 02:02】",
+            "generated_answer": "The video recommends setting the bench at an incline of **30 ° to 45 °** for Smith‑machine incline presses. 【02:02】.",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -203,26 +203,20 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The recommended incline angle for the Smith‑machine press is 30 ° to 45 °.",
+                        "claim": "The video recommends setting the bench at an incline of 30° to 45° for Smith‑machine incline presses.",
                         "verdict": "supported",
-                        "evidence_quote": "Set the bench to 30° to 45°.",
-                        "explanation": "Both chunk_005 and chunk_004 explicitly state that the bench should be set to 30° to 45° for the incline Smith machine press."
-                    },
-                    {
-                        "claim": "[Timestamp: 02:02]",
-                        "verdict": "supported",
-                        "evidence_quote": "\"timestamp\": 122.56",
-                        "explanation": "The retrieved chunks are timestamped at 122.56 seconds, which corresponds to 2 minutes and 2.56 seconds (≈02:02)."
+                        "evidence_quote": "Set the bench to 30° to 45°. Keep your grip slightly wider than shoulder width.",
+                        "explanation": "Both chunk_005 and chunk_004 explicitly state that the bench should be set to 30° to 45° for the incline Smith machine press, directly supporting the claim."
                     }
                 ],
-                "reason": "The answer correctly states the recommended incline angle and includes a timestamp that matches the evidence. All factual statements are directly supported by the retrieved transcript, so the answer receives full scores for correctness, faithfulness, and relevance."
+                "reason": "The generated answer correctly states the recommended incline angle, and this statement is directly backed by the transcript excerpts. No unsupported or contradictory information is present, making the answer fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q06",
             "question": "What are the alternatives to incline Smith machine presses?",
             "answerable": true,
-            "generated_answer": "The video suggests two alternatives to the incline Smith‑machine press:\n\n* **Dumbbell incline presses** – use a pair of dumbbells on an inclined bench instead of the Smith machine.  \n* **Feet‑elevated push‑ups** – perform push‑ups with your feet raised when you’re training at home.\n\nThese options are mentioned around the 3:03‑minute mark of the transcript.",
+            "generated_answer": "The video says that if you don’t have access to a Smith machine for the incline press, you can substitute the movement with **dumbbell incline presses** or, when training at home, **feet‑elevated push‑ups**【Timestamp: 03:03】.",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -230,41 +224,23 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The video suggests two alternatives to the incline Smith‑machine press:",
+                        "claim": "If you don’t have access to a Smith machine for the incline press, you can substitute the movement with dumbbell incline presses or, when training at home, feet‑elevated push‑ups.",
                         "verdict": "supported",
                         "evidence_quote": "If you do not have a Smith machine, use dumbbell incline presses or feet elevated push-ups if you are training at home.",
-                        "explanation": "The transcript explicitly lists two alternatives (dumbbell incline presses and feet‑elevated push‑ups) as substitutes for the Smith‑machine press."
-                    },
-                    {
-                        "claim": "Dumbbell incline presses – use a pair of dumbbells on an inclined bench instead of the Smith machine.",
-                        "verdict": "supported",
-                        "evidence_quote": "If you do not have a Smith machine, use dumbbell incline presses ...",
-                        "explanation": "The transcript mentions using dumbbell incline presses as an alternative when a Smith machine is unavailable."
-                    },
-                    {
-                        "claim": "Feet‑elevated push‑ups – perform push‑ups with your feet raised when you’re training at home.",
-                        "verdict": "supported",
-                        "evidence_quote": "... or feet elevated push-ups if you are training at home.",
-                        "explanation": "The transcript specifies feet‑elevated push‑ups as the home‑based alternative."
-                    },
-                    {
-                        "claim": "These options are mentioned around the 3:03‑minute mark of the transcript.",
-                        "verdict": "supported",
-                        "evidence_quote": "\"timestamp\": 183.04",
-                        "explanation": "The chunk containing the alternatives has a timestamp of 183.04 seconds, which is 3 minutes and 3 seconds."
+                        "explanation": "The retrieved chunk_006 explicitly states that when a Smith machine is unavailable, the speaker recommends dumbbell incline presses or feet‑elevated push‑ups for home training, directly supporting the claim."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, and the answer fully addresses the question with no incorrect or unsupported information."
+                "reason": "The generated answer correctly lists the two alternatives mentioned in the transcript and does not contain any unsupported or contradictory statements. All factual content is backed by the retrieved evidence, making the answer fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q07",
             "question": "How do the lats contribute to a V-taper?",
             "answerable": true,
-            "generated_answer": "The latissimus dorsi (lats) are the key muscle that creates the “V‑taper.” When you develop your lats, they expand outward from your back, widening the upper body and making the waist appear narrower. This outward flare forms the classic triangle or Greek‑god silhouette that defines the V‑taper. (See the explanation of pull‑ups and lats at [Timestamp: 03:03] and the description of the V‑taper at [Timestamp: 00:00]).",
+            "generated_answer": "The latissimus dorsi (lats) are the key muscle that creates the “V‑taper.” When they are well‑developed they flare outward from the back, widening the upper body and making the waist appear narrower, producing the classic triangle or “Greek‑god” silhouette. This outward flare is what gives the illusion of a smaller waist and the overall V‑shaped look. 【Timestamp: 03:03】.",
             "scores": {
                 "correctness": 5,
-                "faithfulness": 5,
+                "faithfulness": 4,
                 "relevance": 5,
                 "abstention_score": null,
                 "claim_checks": [
@@ -275,32 +251,32 @@
                         "explanation": "The transcript explicitly states that the lats are the muscles responsible for the outward flare that defines the V‑taper."
                     },
                     {
-                        "claim": "When you develop your lats, they expand outward from your back, widening the upper body and making the waist appear narrower.",
+                        "claim": "When they are well‑developed they flare outward from the back, widening the upper body and making the waist appear narrower, producing the classic triangle or “Greek‑god” silhouette.",
+                        "verdict": "supported",
+                        "evidence_quote": "Your lats are the muscles that flare outward and create the illusion of a smaller waist. That triangle shape, that Greek god silhouette.",
+                        "explanation": "The same passage describes the lats flaring outward, creating a triangle/Greek‑god silhouette, which matches the claim."
+                    },
+                    {
+                        "claim": "This outward flare is what gives the illusion of a smaller waist and the overall V‑shaped look.",
                         "verdict": "supported",
                         "evidence_quote": "Your lats are the muscles that flare outward and create the illusion of a smaller waist.",
-                        "explanation": "The same sentence describes the lats flaring outward and creating the illusion of a narrower waist, matching the claim."
+                        "explanation": "The transcript directly links the outward flare of the lats to the illusion of a smaller waist, confirming the claim."
                     },
                     {
-                        "claim": "This outward flare forms the classic triangle or Greek‑god silhouette that defines the V‑taper.",
-                        "verdict": "supported",
-                        "evidence_quote": "That triangle shape, that Greek god silhouette.",
-                        "explanation": "The transcript directly calls the outward‑flaring lats the “triangle shape, that Greek god silhouette,” confirming the claim."
-                    },
-                    {
-                        "claim": "See the explanation of pull‑ups and lats at [Timestamp: 03:03] and the description of the V‑taper at [Timestamp: 00:00].",
-                        "verdict": "supported",
-                        "evidence_quote": "timestamp 183.04 (≈03:03) contains the pull‑up and lat discussion; timestamp 0.0 contains the V‑taper description.",
-                        "explanation": "The retrieved chunks include a segment at 183.04 s discussing pull‑ups and lats, and a segment at 0.0 s describing the V‑taper, matching the cited timestamps."
+                        "claim": "Timestamp: 03:03",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "No timestamp information matching 03:03 appears in any of the retrieved transcript chunks."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions. The answer fully addresses the question, providing the correct explanation of how the lats contribute to a V‑taper."
+                "reason": "The answer correctly explains how the lats contribute to a V‑taper and all substantive statements are backed by the transcript. The only issue is the inclusion of a specific timestamp that is not present in the evidence, making the faithfulness score slightly lower. Overall the answer is fully correct, highly relevant, and mostly faithful."
             }
         },
         {
             "id": "Q08",
             "question": "How should you perform pull-ups?",
             "answerable": true,
-            "generated_answer": "To do pull‑ups correctly:\n\n1. **Start each rep from a dead hang** – arms fully extended.  \n2. **Drive your chest toward the bar**, not your chin. This keeps the tension on your lats rather than your arms.  \n3. Use a mental cue: *imagine trying to put your elbows into your back pockets* as you pull yourself up.  \n4. Lower yourself slowly and feel the stretch at the bottom before the next rep.  \n5. Avoid half‑reps, swinging, or using momentum; perform the movement with full control from the bottom to the top.\n\nThese guidelines are described around the 03:03‑04:04 timestamps in the transcript.",
+            "generated_answer": "To do pull‑ups correctly, follow these steps:\n\n1. **Start from a dead hang** – let your arms fully extend before each rep.  \n2. **Drive your chest toward the bar** rather than pulling your chin up. This keeps the tension on your lats.  \n3. **Use a mental cue**: imagine you’re trying to tuck your elbows into your back pockets as you pull.  \n4. **Control the movement** – pull up in a smooth, deliberate motion and lower yourself slowly, feeling a stretch at the bottom.  \n5. **Complete the full range of motion** – go all the way up and all the way down; avoid half‑reps, swinging, or using momentum.  \n\nThese guidelines are outlined around the 03:03‑04:04 timestamps in the transcript.",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 4,
@@ -308,56 +284,50 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "Start each rep from a dead hang – arms fully extended.",
+                        "claim": "Start from a dead hang – let your arms fully extend before each rep.",
                         "verdict": "supported",
                         "evidence_quote": "Start each rep from a dead hang, arms fully extended.",
-                        "explanation": "Chunk 006 explicitly states this as the starting position for pull‑ups."
+                        "explanation": "Chunk 006 explicitly states to start each rep from a dead hang with arms fully extended."
                     },
                     {
-                        "claim": "Drive your chest toward the bar, not your chin.",
+                        "claim": "Drive your chest toward the bar rather than pulling your chin up. This keeps the tension on your lats.",
                         "verdict": "supported",
-                        "evidence_quote": "Drive your chest to the bar, not your chin.",
-                        "explanation": "Both chunk 006 and chunk 007 contain this instruction."
+                        "evidence_quote": "Drive your chest to the bar, not your chin. That keeps tension on your lats instead of your arms.",
+                        "explanation": "Both chunk 007 and chunk 006 contain this instruction, matching the claim."
                     },
                     {
-                        "claim": "That keeps tension on your lats rather than your arms.",
-                        "verdict": "supported",
-                        "evidence_quote": "That keeps tension on your lats instead of your arms.",
-                        "explanation": "Chunk 007 directly links the chest‑to‑bar cue to lat tension."
-                    },
-                    {
-                        "claim": "Use a mental cue: imagine trying to put your elbows into your back pockets as you pull yourself up.",
+                        "claim": "Use a mental cue: imagine you’re trying to tuck your elbows into your back pockets as you pull.",
                         "verdict": "supported",
                         "evidence_quote": "A mental trick I like to use, imagine you were trying to put your elbows into your back pockets.",
-                        "explanation": "Chunk 007 provides the same mental cue."
+                        "explanation": "Chunk 007 provides the exact mental cue described."
                     },
                     {
-                        "claim": "Lower yourself slowly and feel the stretch at the bottom before the next rep.",
+                        "claim": "Control the movement – pull up in a smooth, deliberate motion and lower yourself slowly, feeling a stretch at the bottom.",
                         "verdict": "supported",
-                        "evidence_quote": "When you get to the top, lower yourself slowly and feel the stretch at the bottom.",
-                        "explanation": "Chunk 007 describes lowering slowly and feeling the stretch."
+                        "evidence_quote": "When you get to the top, lower yourself slowly and feel the stretch at the bottom. Control the movement.",
+                        "explanation": "Chunk 007 includes both the slow lower and the emphasis on control."
                     },
                     {
-                        "claim": "Avoid half‑reps, swinging, or using momentum; perform the movement with full control from the bottom to the top.",
+                        "claim": "Complete the full range of motion – go all the way up and all the way down; avoid half‑reps, swinging, or using momentum.",
                         "verdict": "supported",
-                        "evidence_quote": "Common mistakes to avoid are half reps... Swinging and using momentum,",
-                        "explanation": "Chunk 007 lists these mistakes and advises full‑range, controlled reps."
+                        "evidence_quote": "Common mistakes ... half reps ... Do not cheat ... Go all the way up and all the way down. Swinging and using momentum,",
+                        "explanation": "Chunk 007 lists these exact recommendations."
                     },
                     {
-                        "claim": "These guidelines are described around the 03:03‑04:04 timestamps in the transcript.",
+                        "claim": "These guidelines are outlined around the 03:03‑04:04 timestamps in the transcript.",
                         "verdict": "unsupported",
                         "evidence_quote": "",
-                        "explanation": "Chunk 007 is timestamped 183.04 s (≈03:03) and contains the guidelines, but no retrieved chunk provides evidence for a 04:04 timestamp covering the same content."
+                        "explanation": "The transcript provides a guideline at 03:03 (timestamp 183.04) but does not contain pull‑up guidance at 04:04 (timestamp 244.28 relates to a different topic). No evidence confirms the 04:04 timestamp covers these pull‑up guidelines."
                     }
                 ],
-                "reason": "The answer correctly describes how to perform pull‑ups and matches the expected answer, so correctness is 5. All factual statements are backed by the transcript except the claim about the 04:04 timestamp, which lacks supporting evidence, lowering faithfulness to 4. The response directly addresses the question, giving a relevance score of 5."
+                "reason": "All factual statements about the pull‑up technique are directly supported by the retrieved transcript chunks, giving a fully correct and relevant answer. One additional claim about the timestamp range lacks supporting evidence, lowering the faithfulness score to 4 while correctness and relevance remain perfect."
             }
         },
         {
             "id": "Q09",
             "question": "When should you add weight to pull-ups?",
             "answerable": true,
-            "generated_answer": "You should start adding weight to pull‑ups once you’re able to perform about 15–20 clean repetitions. At that point, attach a belt or hold a dumbbell between your legs so that you reach failure in the 12–15‑rep range (typically doing two to three sets of 6–12 reps to failure each time).【04:04】",
+            "generated_answer": "You should start adding weight to pull‑ups once you’re able to perform about **15–20 body‑weight reps**. At that point you can begin using a belt or a dumbbell between your legs so that you reach failure in the 12‑to‑15‑rep range (two to three sets of six‑to‑12 reps each time).【04:04】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -365,71 +335,32 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "You should start adding weight to pull‑ups once you’re able to perform about 15–20 clean repetitions.",
+                        "claim": "You should start adding weight to pull‑ups once you’re able to perform about 15–20 body‑weight reps.",
                         "verdict": "supported",
-                        "evidence_quote": "When you can do 15 to 20 reps, add weight with a belt or a dumbbell between your legs so you fail between 12 and 15 reps.",
-                        "explanation": "The transcript explicitly states that after being able to do 15‑20 reps you should add weight."
+                        "evidence_quote": "When you can do 15 to 20 reps, add weight with a belt or a dumbbell between your legs...",
+                        "explanation": "The transcript explicitly states that when you can do 15 to 20 reps you should add weight."
                     },
                     {
-                        "claim": "At that point, attach a belt or hold a dumbbell between your legs so that you reach failure in the 12–15‑rep range",
+                        "claim": "At that point you can begin using a belt or a dumbbell between your legs so that you reach failure in the 12‑to‑15‑rep range.",
                         "verdict": "supported",
                         "evidence_quote": "add weight with a belt or a dumbbell between your legs so you fail between 12 and 15 reps.",
-                        "explanation": "The same sentence confirms the method (belt or dumbbell) and the target failure range."
+                        "explanation": "The transcript matches the description of using a belt/dumbbell and failing in the 12‑15 rep range."
                     },
                     {
-                        "claim": "typically doing two to three sets of 6–12 reps to failure each time",
+                        "claim": "two to three sets of six‑to‑12 reps each time.",
                         "verdict": "supported",
                         "evidence_quote": "Two to three sets of six to 12 reps going to failure every time.",
-                        "explanation": "The transcript directly mentions two to three sets of six‑to‑12 reps to failure."
+                        "explanation": "The transcript specifies the set and rep scheme exactly."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunk (chunk_008). No contradictions are present, and the answer correctly addresses the question about when to add weight to pull‑ups."
+                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunk (chunk_008). The answer correctly addresses the question, contains no unsupported or contradictory information, and is fully relevant."
             }
         },
         {
             "id": "Q10",
             "question": "What should beginners do if they cannot perform a full pull-up?",
             "answerable": true,
-            "generated_answer": "If you can’t do a full pull‑up yet, begin with assistance. Use resistance bands or an assisted pull‑up machine to perform the movement, then progressively reduce the assistance as you get stronger until you can complete an unassisted pull‑up. [Timestamp: 04:04]",
-            "scores": {
-                "correctness": 5,
-                "faithfulness": 4,
-                "relevance": 5,
-                "abstention_score": null,
-                "claim_checks": [
-                    {
-                        "claim": "If you can’t do a full pull‑up yet, begin with assistance.",
-                        "verdict": "supported",
-                        "evidence_quote": "\"Can't do a full pull-up yet? That is fine. Use resistance bands or an assisted pull-up machine...\"",
-                        "explanation": "The transcript explicitly says that if you cannot do a full pull‑up, you should use assistance."
-                    },
-                    {
-                        "claim": "Use resistance bands or an assisted pull‑up machine to perform the movement",
-                        "verdict": "supported",
-                        "evidence_quote": "\"Use resistance bands or an assisted pull-up machine.\"",
-                        "explanation": "The same sentence in the transcript lists resistance bands and an assisted pull‑up machine as the recommended tools."
-                    },
-                    {
-                        "claim": "then progressively reduce the assistance as you get stronger until you can complete an unassisted pull‑up",
-                        "verdict": "supported",
-                        "evidence_quote": "\"Start where you are, then gradually lower the assistance over time until you can do one.\"",
-                        "explanation": "The transcript advises to gradually lower the assistance until a full pull‑up can be performed."
-                    },
-                    {
-                        "claim": "[Timestamp: 04:04]",
-                        "verdict": "unsupported",
-                        "evidence_quote": "",
-                        "explanation": "The retrieved transcript does not provide any timestamp of 04:04 for this statement."
-                    }
-                ],
-                "reason": "The answer correctly states the recommended approach for beginners who cannot do a full pull‑up, matching the expected answer and supported by the transcript. All factual statements are backed by evidence except the added timestamp, which has no supporting evidence, resulting in a faithfulness score of 4. The answer is fully correct and directly relevant."
-            }
-        },
-        {
-            "id": "Q11",
-            "question": "How should you estimate your maintenance calories?",
-            "answerable": true,
-            "generated_answer": "To figure out your maintenance calories, follow the method described in the video:\n\n1. **Pick a starting calorie target** – you can use an online calculator for a rough estimate, but treat it only as a guess. 【06:04】  \n2. **Eat that amount for a full week** while tracking your weight each morning. 【06:04】  \n3. **Observe the weight trend**:  \n   * If your weight stays the same, the calories you ate that week are your true maintenance level.  \n   * If you’re gaining or losing weight, adjust the calories up or down and repeat until the scale is stable. 【06:04】\n\nSo, the practical way to estimate maintenance is to eat a consistent calorie amount for a week, weigh yourself daily, and use a stable weight as the indicator of your maintenance number.",
+            "generated_answer": "If you can’t do a full pull‑up yet, the video advises using assistance — for example, a resistance band or an assisted pull‑up machine. Begin with the amount of help you need, then progressively reduce the assistance until you can perform an unassisted pull‑up.  \n\n**Relevant timestamp:** 04:04.",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -437,38 +368,65 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "You can use an online calculator for a rough estimate, but treat it only as a guess.",
+                        "claim": "If you can’t do a full pull‑up yet, the video advises using assistance — for example, a resistance band or an assisted pull‑up machine.",
                         "verdict": "supported",
-                        "evidence_quote": "If you have no idea where to start, use an online calculator as a rough guess.",
-                        "explanation": "The transcript explicitly says an online calculator is a rough guess."
+                        "evidence_quote": "Can't do a full pull-up yet? That is fine. Use resistance bands or an assisted pull-up machine.",
+                        "explanation": "The transcript explicitly states that when you cannot do a full pull‑up you should use resistance bands or an assisted pull‑up machine."
                     },
                     {
-                        "claim": "Eat that amount for a full week while tracking your weight each morning.",
+                        "claim": "Begin with the amount of help you need, then progressively reduce the assistance until you can perform an unassisted pull‑up.",
                         "verdict": "supported",
-                        "evidence_quote": "Eat at what you think is your maintenance for 1 week. Weigh yourself every morning.",
-                        "explanation": "The transcript instructs to eat the guessed amount for one week and weigh each morning."
+                        "evidence_quote": "Start where you are, then gradually lower the assistance over time until you can do one.",
+                        "explanation": "The transcript advises starting at your current level and gradually lowering assistance until you can do a full pull‑up."
                     },
                     {
-                        "claim": "If your weight stays the same, the calories you ate that week are your true maintenance level.",
+                        "claim": "Relevant timestamp: 04:04.",
                         "verdict": "supported",
-                        "evidence_quote": "If your weight stays the same, that is your maintenance.",
-                        "explanation": "The transcript states that stable weight indicates maintenance calories."
-                    },
-                    {
-                        "claim": "If you’re gaining or losing weight, adjust the calories up or down and repeat until the scale is stable.",
-                        "verdict": "supported",
-                        "evidence_quote": "Then adjust based on your weekly weigh‑ins.",
-                        "explanation": "The transcript advises adjusting calories based on weekly weigh‑ins, which aligns with the claim."
+                        "evidence_quote": "\"timestamp\": 244.28",
+                        "explanation": "244.28 seconds converts to 4 minutes and 4.28 seconds, matching the stated timestamp 04:04."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions. The answer fully addresses the question, making it completely correct, faithful, and relevant."
+                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, and the answer fully addresses the question. Therefore, the answer receives top scores for correctness, faithfulness, and relevance."
+            }
+        },
+        {
+            "id": "Q11",
+            "question": "How should you estimate your maintenance calories?",
+            "answerable": true,
+            "generated_answer": "To estimate your maintenance calories, start with a rough guess from an online calorie‑calculator. Then track your body weight honestly for about two weeks; if your weight stays the same, the calories you’re eating are roughly your maintenance level. Adjust the number up or down based on your weekly weigh‑ins until the weight stabilizes【06:04】.",
+            "scores": {
+                "correctness": 5,
+                "faithfulness": 5,
+                "relevance": 5,
+                "abstention_score": null,
+                "claim_checks": [
+                    {
+                        "claim": "To estimate your maintenance calories, start with a rough guess from an online calorie‑calculator.",
+                        "verdict": "supported",
+                        "evidence_quote": "If you have no idea where to start, use an online calculator as a rough guess.",
+                        "explanation": "Chunk 013 explicitly says to use an online calculator as a rough guess for starting calories."
+                    },
+                    {
+                        "claim": "Then track your body weight honestly for about two weeks; if your weight stays the same, the calories you’re eating are roughly your maintenance level.",
+                        "verdict": "supported",
+                        "evidence_quote": "Track honestly for 2 weeks. You will find your number. ... every morning. If your weight stays the same, that is your maintenance.",
+                        "explanation": "Chunk 014 mentions tracking honestly for 2 weeks to find your number, and chunk 013 states that if weight stays the same, that is your maintenance."
+                    },
+                    {
+                        "claim": "Adjust the number up or down based on your weekly weigh‑ins until the weight stabilizes.",
+                        "verdict": "supported",
+                        "evidence_quote": "Then adjust based on your weekly weigh-ins.",
+                        "explanation": "Chunk 013 advises adjusting based on weekly weigh‑ins, matching the claim."
+                    }
+                ],
+                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions. The answer correctly addresses how to estimate maintenance calories, making it fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q12",
             "question": "How many calories should you subtract for fat loss?",
             "answerable": true,
-            "generated_answer": "To lose fat, subtract **300 – 500 calories** from your maintenance calorie target. 【06:04】【06:04】【06:04】",
+            "generated_answer": "To lose fat, subtract **300 – 500 calories** from your maintenance calorie target. 【06:04】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -479,17 +437,17 @@
                         "claim": "To lose fat, subtract 300 – 500 calories from your maintenance calorie target.",
                         "verdict": "supported",
                         "evidence_quote": "To lose fat, subtract 300 to 500 calories from that number.",
-                        "explanation": "Both chunk_013 and chunk_012 state that to lose fat you should subtract 300 to 500 calories from your maintenance calories, directly supporting the claim."
+                        "explanation": "The retrieved transcript explicitly states that to lose fat you should subtract 300 to 500 calories from your maintenance number, which matches the claim."
                     }
                 ],
-                "reason": "The generated answer exactly matches the information provided in the transcript, correctly stating the calorie deficit range for fat loss. All factual statements are backed by the retrieved chunks, and the answer directly addresses the question."
+                "reason": "The generated answer correctly states the calorie deficit range for fat loss, and this statement is directly supported by the transcript. No unsupported or contradictory claims are present, making the answer fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q13",
             "question": "How much protein does the creator recommend?",
             "answerable": true,
-            "generated_answer": "The creator recommends consuming roughly 0.8 to 1 gram of protein per pound of body weight—most people should aim for about 1 gram per pound (e.g., a 180‑lb individual would target about 180 grams of protein per day).【Timestamp: 07:05】",
+            "generated_answer": "The creator recommends consuming roughly 0.8 to 1 gram of protein per pound of body weight—most people should aim for the higher end, about 1 gram per pound (e.g., a 180‑lb individual would target about 180 grams of protein per day).【Timestamp: 07:05】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 4,
@@ -497,53 +455,71 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The creator recommends consuming roughly 0.8 to 1 gram of protein per pound of body weight—most people should aim for about 1 gram per pound (e.g., a 180‑lb individual would target about 180 grams of protein per day).",
+                        "claim": "The creator recommends consuming roughly 0.8 to 1 gram of protein per pound of body weight",
                         "verdict": "supported",
-                        "evidence_quote": "A 2018 study found the sweet spot is 0.8 to 1 g of protein per pound of body weight. ... Most of you will aim for 1 g per pound. So, if you weigh 180 lb, shoot for 180 g of protein every day.",
-                        "explanation": "The transcript explicitly states the sweet spot is 0.8‑1 g per pound and gives the 180 lb example, matching the claim."
+                        "evidence_quote": "A 2018 study found the sweet spot is 0.8 to 1 g of protein per pound of body weight.",
+                        "explanation": "Chunk 014 explicitly states the recommended range of 0.8 to 1 gram per pound."
                     },
                     {
-                        "claim": "Timestamp: 07:05",
+                        "claim": "most people should aim for the higher end, about 1 gram per pound",
+                        "verdict": "supported",
+                        "evidence_quote": "Most of you will aim for 1 g per pound.",
+                        "explanation": "Chunk 014 says the majority should target 1 g per pound."
+                    },
+                    {
+                        "claim": "e.g., a 180‑lb individual would target about 180 grams of protein per day",
+                        "verdict": "supported",
+                        "evidence_quote": "So, if you weigh 180 lb, shoot for 180 g of protein every day.",
+                        "explanation": "Chunk 014 provides the exact example matching the claim."
+                    },
+                    {
+                        "claim": "【Timestamp: 07:05】",
                         "verdict": "unsupported",
                         "evidence_quote": "",
-                        "explanation": "No retrieved transcript chunk provides a timestamp of 07:05 for this statement."
+                        "explanation": "No retrieved transcript chunk provides a timestamp of 07:05, so this detail is not supported by the evidence."
                     }
                 ],
-                "reason": "The answer correctly states the protein recommendation, which is fully supported by the transcript, giving it a perfect correctness score. All factual content is accurate except for the added timestamp, which is not found in the evidence, lowering faithfulness slightly. The answer directly addresses the question, so relevance is high."
+                "reason": "The answer correctly states the protein recommendation and provides a matching example, all of which are supported by the transcript. The only unsupported element is the added timestamp, which is not found in the retrieved chunks, lowering the faithfulness score to 4. No contradictions are present, and the answer directly addresses the question."
             }
         },
         {
             "id": "Q14",
             "question": "How many protein-rich meals should you eat daily?",
             "answerable": true,
-            "generated_answer": "The guide recommends eating **three to six high‑protein meals each day** (each spaced a few hours apart)【07:05】.",
+            "generated_answer": "The guidance recommends eating **between three and six high‑protein meals each day** (the ideal range is three‑to‑six meals, spaced a few hours apart).【Timestamp: 07:05】",
             "scores": {
                 "correctness": 5,
-                "faithfulness": 5,
+                "faithfulness": 4,
                 "relevance": 5,
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "The guide recommends eating three to six high‑protein meals each day.",
+                        "claim": "The guidance recommends eating between three and six high‑protein meals each day",
                         "verdict": "supported",
                         "evidence_quote": "The ideal range is three to six high protein meals per day, each separated by a few hours.",
-                        "explanation": "The transcript explicitly states the ideal range is three to six high‑protein meals per day."
+                        "explanation": "Chunk 014 explicitly states the ideal range is three to six high‑protein meals per day."
                     },
                     {
-                        "claim": "Each spaced a few hours apart.",
+                        "claim": "the ideal range is three‑to‑six meals, spaced a few hours apart",
                         "verdict": "supported",
                         "evidence_quote": "The ideal range is three to six high protein meals per day, each separated by a few hours.",
-                        "explanation": "The same sentence confirms that the meals should be separated by a few hours."
+                        "explanation": "The same sentence from chunk 014 confirms the spacing of the meals."
+                    },
+                    {
+                        "claim": "【Timestamp: 07:05】",
+                        "verdict": "unsupported",
+                        "evidence_quote": "",
+                        "explanation": "No retrieved transcript chunk provides a timestamp of 07:05; the timestamps in the evidence are given in seconds (e.g., 425.52)."
                     }
                 ],
-                "reason": "All factual statements in the answer are directly supported by the retrieved transcript, and the answer correctly provides the recommended number of protein‑rich meals, making it fully correct, faithful, and relevant."
+                "reason": "The answer correctly states the recommended number of protein‑rich meals (three to six), matching the evidence, so correctness and relevance are perfect. All factual content claims are supported by the transcript, but the added timestamp is not found in the retrieved chunks, making the answer slightly less faithful."
             }
         },
         {
             "id": "Q15",
             "question": "Which food categories should each meal include?",
             "answerable": true,
-            "generated_answer": "Each meal should be built around four basic food categories:\n\n1. **Protein source** – e.g., chicken breast, lean turkey, fish, egg whites, Greek yogurt, cottage cheese.  \n2. **Carbohydrate source** – e.g., potatoes, sweet potatoes, brown rice, oats, quinoa.  \n3. **Fat source** – e.g., avocado, olive oil, nuts, seeds, nut butter.  \n4. **Vegetable or fruit** – e.g., broccoli, spinach, bell peppers, berries, apples.  \n\n(See transcript at 08:07 – “Pick a protein source, a carb source, a fat source, … and a vegetable or fruit for each meal.”)",
+            "generated_answer": "Each meal should be built around four food categories:\n\n1. **Protein source** – e.g., chicken breast, lean turkey, fish, egg whites, Greek yogurt, cottage cheese.  \n2. **Carbohydrate source** – e.g., potatoes, sweet potatoes, brown rice, oats, quinoa.  \n3. **Fat source** – e.g., avocado, olive oil, nuts, seeds, nut butter.  \n4. **Vegetable or fruit** – e.g., broccoli, spinach, bell peppers, berries, apples.  \n\nThese categories are mentioned at 08:07 – “Pick a protein source, a carb source, a fat source… and a vegetable or fruit for each meal.”【Timestamp: 08:07】",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -551,7 +527,7 @@
                 "abstention_score": null,
                 "claim_checks": [
                     {
-                        "claim": "Each meal should be built around four basic food categories:",
+                        "claim": "Each meal should be built around four food categories:",
                         "verdict": "supported",
                         "evidence_quote": "Pick a protein source, a carb source, a fat source, [music] and a vegetable or fruit for each meal.",
                         "explanation": "The transcript explicitly states that each meal should include a protein, carb, fat, and vegetable/fruit source."
@@ -560,34 +536,34 @@
                         "claim": "Protein source – e.g., chicken breast, lean turkey, fish, egg whites, Greek yogurt, cottage cheese.",
                         "verdict": "supported",
                         "evidence_quote": "Examples, for protein, chicken breast, lean turkey, fish, egg whites, Greek yogurt, cottage cheese.",
-                        "explanation": "The transcript lists these exact protein examples."
+                        "explanation": "The transcript lists exactly these items as examples of protein sources."
                     },
                     {
                         "claim": "Carbohydrate source – e.g., potatoes, sweet potatoes, brown rice, oats, quinoa.",
                         "verdict": "supported",
                         "evidence_quote": "For carbs, potatoes, sweet potatoes, brown rice, oats, quinoa.",
-                        "explanation": "The transcript provides the same carbohydrate examples."
+                        "explanation": "The transcript provides these items as examples of carbohydrate sources."
                     },
                     {
                         "claim": "Fat source – e.g., avocado, olive oil, nuts, seeds, nut butter.",
                         "verdict": "supported",
                         "evidence_quote": "For fats, avocado, olive oil, nuts, seeds, nut butter.",
-                        "explanation": "The transcript lists these fat examples."
+                        "explanation": "The transcript lists these foods as examples of fat sources."
                     },
                     {
                         "claim": "Vegetable or fruit – e.g., broccoli, spinach, bell peppers, berries, apples.",
                         "verdict": "supported",
                         "evidence_quote": "For vegetables and fruits, broccoli, spinach, bell peppers, berries, [music] apples.",
-                        "explanation": "The transcript includes these vegetable/fruit examples."
+                        "explanation": "The transcript includes these items as examples of vegetable or fruit choices."
                     },
                     {
-                        "claim": "(See transcript at 08:07 – “Pick a protein source, a carb source, a fat source, … and a vegetable or fruit for each meal.”)",
+                        "claim": "These categories are mentioned at 08:07 – “Pick a protein source, a carb source, a fat source… and a vegetable or fruit for each meal.”",
                         "verdict": "supported",
-                        "evidence_quote": "timestamp\": 487.64 ... \"Pick a protein source, a carb source, a fat source, [music] and a vegetable or fruit for each meal.",
-                        "explanation": "487.64 seconds corresponds to approximately 08:07, matching the claimed timestamp."
+                        "evidence_quote": "Pick a protein source, a carb source, a fat source, [music] and a vegetable or fruit for each meal.",
+                        "explanation": "The transcript contains the quoted sentence; the timestamp aligns with the provided time (08:07 corresponds to 487.64 seconds)."
                     }
                 ],
-                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with exact quotations matching each claim. The answer fully addresses the question, providing the four required food categories, so it receives top scores for correctness, faithfulness, and relevance."
+                "reason": "All factual statements in the generated answer are directly supported by the retrieved transcript chunks, with no contradictions. The answer fully addresses the question, providing the correct four food categories and matching examples, resulting in perfect scores for correctness, faithfulness, and relevance."
             }
         },
         {
@@ -604,18 +580,18 @@
                     {
                         "claim": "The transcript does not provide any information about the creator’s age.",
                         "verdict": "supported",
-                        "evidence_quote": "Real quick, look at these two guys. Guy A, Guy B. Who looks better to you? ... (no mention of the creator’s age in any of the retrieved chunks)",
-                        "explanation": "None of the retrieved transcript chunks contain any reference to the creator’s age, so the statement that the transcript provides no such information is accurate."
+                        "evidence_quote": "",
+                        "explanation": "None of the retrieved transcript chunks contain any mention of the creator’s age, so the statement that the transcript provides no such information is accurate."
                     }
                 ],
-                "reason": "The answer correctly states that the transcript lacks any information about the creator's age, which is fully supported by the retrieved chunks. All claims are accurate, faithful to the evidence, and directly address the question."
+                "reason": "The answer correctly states that the transcript lacks any information about the creator's age, which is fully supported by the retrieved chunks (they contain no age details). Therefore the answer is fully correct, faithful, and relevant."
             }
         },
         {
             "id": "Q17",
             "question": "What is the creator's exact weekly workout schedule?",
             "answerable": false,
-            "generated_answer": "The transcript does not provide the creator’s exact weekly workout schedule. No specific days, number of sessions, or exercise breakdown per week are mentioned in the provided text.",
+            "generated_answer": "The transcript does not specify the creator’s exact weekly workout schedule.",
             "scores": {
                 "correctness": 5,
                 "faithfulness": 5,
@@ -623,19 +599,13 @@
                 "abstention_score": 5,
                 "claim_checks": [
                     {
-                        "claim": "The transcript does not provide the creator’s exact weekly workout schedule.",
+                        "claim": "The transcript does not specify the creator’s exact weekly workout schedule.",
                         "verdict": "supported",
-                        "evidence_quote": "The provided chunks discuss diet systems, V‑taper concepts, exercise technique, and mindset, but none contain any mention of a specific weekly workout schedule.",
-                        "explanation": "None of the retrieved transcript chunks include a detailed weekly schedule, so the claim that the transcript does not provide it is supported."
-                    },
-                    {
-                        "claim": "No specific days, number of sessions, or exercise breakdown per week are mentioned in the provided text.",
-                        "verdict": "supported",
-                        "evidence_quote": "Chunk 002 talks about the misconception of training six days a week, but does not list any concrete days or session counts; all other chunks similarly lack any weekly breakdown.",
-                        "explanation": "The evidence shows that while training frequency is discussed in general terms, there is no explicit schedule, supporting the claim that no specific days, sessions, or breakdown are mentioned."
+                        "evidence_quote": "before you even start. Most guys think building a V-taper means training six days a week, hitting every body part every [music] single day. That is wrong... (chunk_002)",
+                        "explanation": "The retrieved chunks discuss exercise technique, diet, and general training philosophy, but none provide a concrete weekly workout schedule. The presence of unrelated content confirms that the schedule is not specified."
                     }
                 ],
-                "reason": "The answer correctly states that the transcript lacks the requested schedule (correctness 5). All factual statements are backed by the absence of schedule information in the retrieved chunks, with no contradictions (faithfulness 5). The response directly addresses the question, making it fully relevant (relevance 5)."
+                "reason": "The answer correctly states that the transcript lacks the requested weekly schedule, which is fully supported by the retrieved evidence (no schedule is mentioned). All factual claims are backed by the transcript, making the answer fully correct, faithful, and relevant."
             }
         },
         {
@@ -653,10 +623,10 @@
                         "claim": "The transcript does not provide any information about the creator’s body fat percentage.",
                         "verdict": "supported",
                         "evidence_quote": "",
-                        "explanation": "None of the retrieved transcript chunks mention the creator's body fat percentage; they discuss calories, V‑taper shape, exercises, and nutrition, so the claim that the transcript lacks this information is consistent with the evidence."
+                        "explanation": "None of the retrieved transcript chunks contain any mention of the creator's body fat percentage, so the statement that the transcript provides no such information is accurate."
                     }
                 ],
-                "reason": "The answer correctly states that the transcript contains no data on body fat percentage, which matches the retrieved content. All factual statements are supported, and the response directly addresses the question."
+                "reason": "The answer correctly states that the transcript lacks any data on the creator's body fat percentage, which is fully supported by the retrieved chunks (no contradictory information). Therefore the answer is fully correct, faithful to the evidence, and directly addresses the question."
             }
         }
     ]

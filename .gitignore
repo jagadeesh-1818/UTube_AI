@@ -24,3 +24,6 @@ requirements_backup.txt
 .cache/
 *.faiss
 *.pkl
+
+evals/answer_evaluation_k6.json
+evals/generation_results_k6.json

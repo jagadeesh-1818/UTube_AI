@@ -27,7 +27,7 @@ if not os.getenv("GROQ_API_KEY"):
 judge = ChatGroq(
     model="openai/gpt-oss-120b",
     temperature=0,
-    max_tokens=1200,
+    max_tokens=3000,
     reasoning_effort="low",
     reasoning_format="hidden",
     max_retries=2,
@@ -241,10 +241,14 @@ def evaluate_abstention(answer):
 
     abstention_phrases = [
         "does not provide",
+        "does not specify",
+        "doesn't specify",
         "not provided",
         "not specified",
         "not mentioned",
+        "not stated",
         "no information",
+        "no mention",
         "cannot determine",
         "is unavailable",
         "doesn't mention"
@@ -405,12 +409,24 @@ def evaluate_answer(item):
         if not isinstance(claim, dict):
             raise ValueError("Invalid claim check")
 
-        if claim.get("verdict") not in [
+        # Normalize verdict capitalization and whitespace
+        verdict = str(claim.get("verdict", "")).strip().lower()
+
+        # Map partially supported claims to unsupported.
+        # A claim must be fully supported to receive the supported verdict.
+        if verdict == "partially supported":
+            verdict = "unsupported"
+
+        if verdict not in [
             "supported",
             "unsupported",
             "contradicted"
         ]:
-            raise ValueError("Invalid claim verdict")
+            raise ValueError(
+                f"Invalid claim verdict: {repr(claim.get('verdict'))}"
+            )
+
+        claim["verdict"] = verdict
 
         if not claim.get("claim"):
             raise ValueError("Claim text is missing")

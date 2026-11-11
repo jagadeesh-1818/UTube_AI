@@ -1,6 +1,11 @@
 
 import json
+import sys
 from pathlib import Path
+
+# Add project root directory to Python import path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from dotenv import load_dotenv
 
@@ -34,23 +39,49 @@ def run_generation_evaluation():
 
     retriever = create_retriever(vector_store)
 
-    results = []
+    # Load previously generated results so we can resume
+    results_by_id = {}
+
+    if OUTPUT_FILE.exists():
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as file:
+                previous_results = json.load(file)
+
+            if isinstance(previous_results, list):
+                results_by_id = {
+                    item["id"]: item for item in previous_results
+                    if isinstance(item, dict) and "id" in item
+                }
+
+            print(f"Loaded {len(results_by_id)} previous results.")
+
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"Could not load previous results: {e}")
+            print("Starting with an empty results list.")
 
     total = len(evaluation_dataset)
 
     print(f"\nStarting generation evaluation for {total} questions...")
 
+    
     for index, item in enumerate(evaluation_dataset, start=1):
 
         question_id = item["id"]
         question = item["question"]
+
+        # Skip questions that already have successful answers
+        if (
+            question_id in results_by_id
+            and results_by_id[question_id].get("generated_answer") is not None
+        ):
+            print(f"Skipping {question_id} - already generated.")
+            continue
 
         print("\n" + "=" * 60)
         print(f"Question {index}/{total}: {question_id}")
         print(f"Question: {question}")
 
         try:
-
             # Empty history ensures independent evaluation
             result = get_rag_response(
                 question=question,
@@ -89,7 +120,6 @@ def run_generation_evaluation():
             ])
 
         except Exception as e:
-
             print(f"\nERROR: {type(e).__name__}: {e}")
 
             evaluation_result = {
@@ -108,32 +138,47 @@ def run_generation_evaluation():
                 }
             }
 
-        results.append(evaluation_result)
+        # IMPORTANT: Save successful AND failed results
+        results_by_id[question_id] = evaluation_result
 
-    # Save all generated answers and retrieved evidence
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
+        # Checkpoint after every question
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
+            json.dump(
+                [
+                    results_by_id[item["id"]]
+                    for item in evaluation_dataset
+                    if item["id"] in results_by_id
+                ],
+                file,
+                indent=4,
+                ensure_ascii=False
+            )
 
-        json.dump(
-            results,
-            file,
-            indent=4,
-            ensure_ascii=False
-        )
+        print(f"\nCheckpoint saved: {len(results_by_id)}/{total}")
+
+
+    # Final summary
+    results = [
+        results_by_id[item["id"]]
+        for item in evaluation_dataset
+        if item["id"] in results_by_id
+    ]
 
     successful = sum(
         1 for result in results
         if result.get("generated_answer") is not None
     )
 
+    failed = total - successful
+
     print("\n" + "=" * 60)
     print("GENERATION EVALUATION COMPLETED")
     print(f"Total questions: {total}")
     print(f"Successful answers: {successful}")
-    print(f"Failed answers: {total - successful}")
+    print(f"Failed answers: {failed}")
     print(f"Results saved to: {OUTPUT_FILE}")
     print("=" * 60)
 
 
 if __name__ == "__main__":
-
     run_generation_evaluation()
