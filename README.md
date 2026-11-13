@@ -4,7 +4,7 @@
 
 UTube AI is a multilingual Retrieval-Augmented Generation (RAG) application that allows users to interact with YouTube videos through natural language conversations.
 
-Simply provide a YouTube URL, let the application process its transcript, and start asking questions. The system retrieves relevant transcript segments and uses a Large Language Model (LLM) to generate context-aware answers.
+Simply provide a YouTube URL, let the application retrieve its transcript automatically, or paste the transcript manually if automatic extraction fails. Start asking questions and receive context-aware answers.
 
 ## 🚀 Live Demo
 
@@ -13,6 +13,9 @@ Simply provide a YouTube URL, let the application process its transcript, and st
 ## ✨ Features
 
 - **Multilingual Support:** Processes available transcripts in multiple languages and generates responses in the language of the user's question.
+- **Automatic Transcript Extraction:** Retrieves available YouTube transcripts using the YouTube Transcript API.
+- **Manual Transcript Input:** Allows users to paste transcripts manually when automatic extraction fails.
+- **Transcript Format Support:** Accepts plain-text and timestamped transcripts.
 - **Conversational Q&A:** Supports questions and contextual follow-up questions about video content.
 - **Retrieval-Augmented Generation:** Grounds generated answers in relevant transcript segments.
 - **Multilingual Semantic Search:** Uses multilingual MiniLM embeddings to understand queries across supported languages.
@@ -38,61 +41,69 @@ Simply provide a YouTube URL, let the application process its transcript, and st
 
 ## 🧠 System Architecture
 
-UTube AI follows a Retrieval-Augmented Generation pipeline.
+UTube AI follows a Retrieval-Augmented Generation pipeline with automatic and manual transcript input options.
 
 ```text
-                  YouTube URL
-                       |
-                       v
-            YouTube Transcript API
-                       |
-                       v
+                   YouTube URL
+                        |
+                        v
+             YouTube Transcript API
+                        |
+                Extraction Failure?
+                   /         \
+                 No           Yes
+                 |             |
+                 |       Manual Transcript
+                 |             |
+                 \             /
+                  \           /
+                   v         v
               Transcript Processing
-                       |
-                       v
-                 Text Chunking
-                       |
-                       v
-             Multilingual MiniLM
-                 Embeddings
-                       |
-                       v
-                FAISS Vector Store
-                       |
-                       |
-                User Question
-                       |
-                       v
-                Language Detection
-                       |
-                       v
-                 Query Rewriting
-             (when chat history exists)
-                       |
-                       v
-                MMR Retrieval
-                       |
-                       v
-             Relevant Transcript Chunks
-                       |
-                       v
-                    Groq LLM
-                 GPT-OSS 120B
-                       |
-                       v
-              Context-Aware Answer
+                        |
+                        v
+                  Text Chunking
+                        |
+                        v
+              Multilingual MiniLM
+                  Embeddings
+                        |
+                        v
+                 FAISS Vector Store
+                        |
+                 User Question
+                        |
+                        v
+                 Language Detection
+                        |
+                        v
+                  Query Rewriting
+              (when chat history exists)
+                        |
+                        v
+                 MMR Retrieval
+                        |
+                        v
+              Relevant Transcript Chunks
+                        |
+                        v
+                     Groq LLM
+                  GPT-OSS 120B
+                        |
+                        v
+               Context-Aware Answer
 ```
 
 ### How It Works
 
 1. **Video Input:** The user provides a YouTube video URL.
-2. **Transcript Extraction:** The YouTube Transcript API retrieves an available transcript.
-3. **Text Processing:** The transcript is divided into smaller overlapping chunks.
-4. **Embedding Generation:** The multilingual MiniLM model converts transcript chunks into vector embeddings.
-5. **Vector Storage:** FAISS stores the embeddings for efficient similarity search.
-6. **Question Processing:** The user's question is language-detected and rewritten into a standalone question when conversation history is available.
-7. **Retrieval:** MMR retrieves relevant and diverse transcript chunks.
-8. **Answer Generation:** Groq's GPT-OSS 120B generates an answer grounded in the retrieved transcript context.
+2. **Automatic Transcript Extraction:** The YouTube Transcript API attempts to retrieve an available transcript.
+3. **Manual Transcript Fallback:** If automatic extraction fails, users can copy the transcript using YouTube's Show transcript feature and paste it into UTube AI.
+4. **Transcript Processing:** Plain-text and timestamped transcripts are converted into LangChain Documents and divided into smaller overlapping chunks.
+5. **Embedding Generation:** The multilingual MiniLM model converts transcript chunks into vector embeddings.
+6. **Vector Storage:** FAISS stores the embeddings for efficient similarity search.
+7. **Question Processing:** The user's question is language-detected and rewritten into a standalone question when conversation history is available.
+8. **Retrieval:** MMR retrieves relevant and diverse transcript chunks.
+9. **Answer Generation:** Groq's GPT-OSS 120B generates an answer grounded in the retrieved transcript context.
 
 ### Retrieval Configuration
 
@@ -108,6 +119,30 @@ The current retrieval configuration uses:
 | Chunk overlap | 200 |
 
 The MMR configuration balances relevance and diversity when selecting transcript chunks.
+
+## 📝 Using Manual Transcript Input
+
+YouTube may restrict automated transcript requests originating from cloud-hosted IP addresses. When this happens, UTube AI provides an alternative manual transcript input option.
+
+**How to use it:**
+
+1. Open the YouTube video in your browser.
+2. Expand the video description and select **Show transcript**, if available.
+3. Copy the transcript text.
+4. Enter the YouTube URL in UTube AI and click **Process Video**.
+5. If automatic extraction fails, the manual transcript input section appears.
+6. Select the transcript language.
+7. Paste the copied transcript and click **Process Pasted Transcript**.
+8. Once processing completes, start asking questions about the video.
+
+**Supported input:**
+- Plain-text transcripts.
+- Timestamped transcripts.
+- SRT/VTT-style timestamped text pasted into the input area.
+
+Timestamps are preserved where available to support timestamp-aware answers.
+
+**Note:** Manual transcript input requires the user to obtain and provide the transcript. Videos without accessible captions or transcripts may still require another transcript source.
 
 ## 📂 Project Structure
 
@@ -298,9 +333,11 @@ The application can be accessed here:
 
 ## ⚠️ Limitations
 
-- The application depends on YouTube transcript availability and accessibility.
-- Videos without accessible transcripts cannot be processed automatically.
+- Automatic transcript extraction depends on YouTube transcript availability and accessibility.
 - YouTube may restrict transcript requests originating from cloud-hosted IP addresses.
+- Manual transcript input is available as a fallback when automatic extraction fails.
+- Manual input requires users to obtain and paste the transcript themselves.
+- Videos without accessible transcripts cannot be processed unless a transcript is supplied through another source.
 - Answer quality depends on transcript quality and retrieval relevance.
 - The application answers questions about information available in the transcript, not everything visually presented in the video.
 - Initial execution may take longer because the embedding model needs to be downloaded.
